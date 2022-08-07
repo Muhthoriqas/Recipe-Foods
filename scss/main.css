@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 8.5rem;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+html::-webkit-scrollbar-thumb {
+  background: #b4e7f8;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: #f7f7f7;
+  background: #7cd5f3;
+  border-radius: 5px;
+  font-weight: 450;
+}
+.btn:hover {
+  background: #99d98c;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+}
+.header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #444;
+  cursor: default;
+}
+.header .logo i {
+  padding-right: 0.5rem;
+  color: #7cd5f3;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+.header .logo i:hover {
+  transform: rotate(-360deg);
+  color: #99d98c;
+}
+.header .navbar a {
+  font-size: 2rem;
+  margin: 0 1rem;
+  color: #666;
+  padding: 0.6rem 0.6rem;
+  font-weight: 450;
+}
+.header .navbar a:hover {
+  color: #fff;
+  background: #b4e7f8;
+  border-radius: 7px;
+}
+.header .icons .fas {
+  height: 4.5rem;
+  width: 4.5rem;
+  line-height: 4.5rem;
+  font-size: 2rem;
+  color: #444;
+  border-radius: 0.5rem;
+  margin-left: 0.3rem;
+  cursor: pointer;
+  text-align: center;
+  background: #7cd5f3;
+}
+.header .icons .fas:hover {
+  color: #f7f7f7;
+  transform: scale(1.2);
+  cursor: pointer;
+  background: #b4e7f8;
+}
+
+#menu-btn {
+  display: none;
+}
+
+.home {
+  background-image: url(../assets/banner-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.home .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.home .row .content {
+  flex: 1 1 42rem;
+}
+.home .row .content h1 {
+  font-size: 4.5rem;
+  background: -webkit-linear-gradient(right, #99d98c, #1f93ba);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 55px;
+}
+.home .row .content p {
+  color: #444;
+  font-size: 1.5rem;
+  line-height: 2;
+  padding: 1rem 0;
+}
+.home .row .content .fa-search-plus {
+  transform: rotate(90deg);
+  font-size: 2.3rem;
+  color: white;
+}
+.home .row .content .fa-search-plus:hover {
+  color: #444;
+}
+
+.search-food {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background-image: url(../assets/banner-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  width: 100%;
+  height: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.brand {
+  text-align: center;
+  font-size: 4rem;
+  color: whitesmoke;
+  margin-bottom: 30px;
+}
+
+form {
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: rgb(223, 223, 223);
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  background-color: rgb(223, 223, 223);
+  display: inline-block;
+}
+
+form ion-icon {
+  width: 8%;
+  font-size: 3rem;
+  margin-bottom: -8px;
+  color: rgb(75, 75, 75);
+  display: inline-block;
+}
+
+.search-result {
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-gap: 25px;
+  grid-template: auto/repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.item {
+  width: 100%;
+  border-radius: 8px;
+  background-color: rgb(37, 37, 37);
+  padding: 15px;
+  overflow: hidden;
+}
+
+.item img {
+  width: 100%;
+  height: 300px;
+  border-radius: 4px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-result .title {
+  color: whitesmoke;
+  margin: 20px 10px 0 0;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.view-btn {
+  text-decoration: none;
+  text-align: center;
+  width: 130px;
+  padding: 10px 0;
+  background-color: #404041;
+  color: whitesmoke;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 20px;
+  border-radius: 4px;
+  align-self: flex-start;
+}
+
+.item-data {
+  color: whitesmoke;
+  display: block;
+  margin-top: 10px;
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  line-height: 2rem;
+}
+
+.container.initial .brand {
+  font-size: 7rem;
+}
+
+.container.initial form {
+  max-width: 800px;
+}
+
+.container.initial form input {
+  padding: 20px;
+  font-size: 3rem;
+}
+
+span {
+  color: #7cd5f3;
+}
+
+@media (max-width: 768px) {
+  .search-result {
+    grid-gap: 10px;
+  }
+  .container.initial .brand {
+    font-size: 4rem;
+  }
+  .container.initial form {
+    max-width: 500px;
+  }
+  .container.initial form input {
+    padding: 10px;
+    font-size: 2rem;
+  }
+}
+@-webkit-keyframes fadeUp {
+  0% {
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+}
+@keyframes fadeUp {
+  0% {
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+}
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+  section {
+    padding: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .header .navbar a {
+    font-size: 2rem;
+    margin: 2rem;
+    display: block;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./scss/main.css" />
+    <!-- Js -->
+    <script src="./js/script.js" defer></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <title>Recipe Food | Thoriq AS</title>
+  </head>
+  <body>
+    <!-- Header Section Start -->
+    <header class="header">
+      <a href="#" class="logo"><i class="fas fa-utensils"></i> Food Recipes</a>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#search">Search</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="cart-btn" class="fas fa-shopping-cart"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+      </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Hero Section Start-->
+    <section class="home" id="home">
+      <div class="row">
+        <div class="content">
+          <h1>Learn And Share <br />Food Recipes Here!</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio,
+            tenetur iusto vel incidunt accusamus consectetur voluptas magnam
+            deserunt ipsa unde voluptatum saepe inventore illum, quibusdam nihil
+            totam sapiente cupiditate?
+          </p>
+          <a href="#search" class="btn"
+            ><i class="fa fa-search-plus"></i> Browse Recipe</a
+          >
+        </div>
+        <div class="images">
+          <img src="./assets/hero-dish.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+    <section class="search-food">
+      <div class="container initial">
+        <h1 class="brand">Recipe App</h1>
+        <form>
+          <input type="text" placeholder="Search Your Recipe..." />
+          <ion-icon name="search"></ion-icon>
+        </form>
+        <div class="search-result">
+          <!-- <div class="item">
+                <img src="./img-1.jpg" alt="">
+                <div class="flex-container">
+                  <h1 class="title">This is a recipe item</h1>
+                  <a class="view-btn" href="#">View Recipe</a>
+                </div>
+                <p class="item-data">Calories: 120</p>
+              </div> -->
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+  </body>
+</html>
