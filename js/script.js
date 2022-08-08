@@ -48,13 +48,17 @@ function generateHTML(results) {
             ? result.recipe.dishType
             : "Data Not Found"
         }</p>
-        <p class="item-data">Ingredients: ${
+        <p class="list-ingredient">Ingredients: ${
           result.recipe.ingredientLines.length > 10
-            ? result.recipe.ingredientLines
-            : "<span>To Much Ingredients To Show! <br />Click View Recipe Button To See Full Information</span>"
+            ? "<span>To Much Ingredients To Show! Click View Recipe Button To See Full Information</span>"
+            : result.recipe.ingredientLines.map((indredient, indexIn) => {
+                return `<li class="list-group-item">${indredient}
+            </li>`;
+              })
         }</p>
       </div>
     `;
   });
-  searchResultDiv.innerHTML = generatedHTML;
+  var hasil = generatedHTML.replaceAll(",", "");
+  searchResultDiv.innerHTML = hasil;
 }

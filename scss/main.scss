@@ -104,6 +104,9 @@ section {
       }
     }
   }
+  .images {
+    width: 100%;
+  }
 
   .navbar {
     a {
@@ -180,7 +183,18 @@ section {
         }
       }
     }
+    .images {
+      flex: 1 1 45rem;
+    }
   }
+}
+.text {
+  color: $white;
+  font-size: 2rem;
+}
+.list-ingredient {
+  color: white;
+  font-size: 1.5rem;
 }
 .search-food {
   min-height: 100vh;
@@ -192,122 +206,132 @@ section {
   background-image: url(../assets/banner-bg.jpg);
   background-size: cover;
   background-position: center;
-}
-.container {
-  width: 100%;
-  height: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-.brand {
-  text-align: center;
-  font-size: 4rem;
-  color: whitesmoke;
-  margin-bottom: 30px;
-}
-form {
-  width: 90%;
-  max-width: 400px;
-  margin: 20px auto;
-  background-color: rgb(223, 223, 223);
-}
-input {
-  width: 90%;
-  padding: 10px;
-  border-radius: 4px;
-  border: none;
-  outline: none;
-  font-size: 2rem;
-  background-color: rgb(223, 223, 223);
-  display: inline-block;
-}
-form ion-icon {
-  width: 8%;
-  font-size: 3rem;
-  margin-bottom: -8px;
-  color: rgb(75, 75, 75);
-  display: inline-block;
-}
-.search-result {
-  margin-top: 50px;
-  width: 100%;
-  display: grid;
-  grid-gap: 25px;
-  grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
-}
-.item {
-  width: 100%;
-  border-radius: 8px;
-  background-color: rgb(37, 37, 37);
-  padding: 15px;
-  overflow: hidden;
-}
-.item img {
-  width: 100%;
-  height: 300px;
-  border-radius: 4px;
-}
-.flex-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.search-result .title {
-  color: whitesmoke;
-  margin: 20px 10px 0 0;
-  font-size: 1.8rem;
-  font-weight: 400;
-}
-.view-btn {
-  text-decoration: none;
-  text-align: center;
-  width: 130px;
-  padding: 10px 0;
-  background-color: #404041;
-  color: whitesmoke;
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-top: 20px;
-  border-radius: 4px;
-  align-self: flex-start;
-}
-.item-data {
-  color: whitesmoke;
-  display: block;
-  margin-top: 10px;
-  font-size: 1.4rem;
-  letter-spacing: 0.05rem;
-  line-height: 2rem;
-}
-.container.initial .brand {
-  font-size: 7rem;
-}
-.container.initial form {
-  max-width: 800px;
-}
-.container.initial form input {
-  padding: 20px;
-  font-size: 3rem;
-}
-span {
-  color: $blue;
+  .container {
+    width: 100%;
+    height: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+    h1 {
+      text-align: center;
+      font-size: 4rem;
+      color: $black;
+      margin-bottom: 30px;
+    }
+    form {
+      width: 90%;
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: rgb(223, 223, 223);
+
+      input {
+        width: 90%;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        background-color: rgb(223, 223, 223);
+        display: inline-block;
+        padding: 15px;
+        font-size: 2.5rem;
+      }
+      i {
+        width: 8%;
+        font-size: 2.5rem;
+        margin-bottom: -8px;
+        color: rgb(75, 75, 75);
+        display: inline-block;
+        text-align: center;
+        align-items: center;
+      }
+    }
+    .search-result {
+      margin-top: 50px;
+      width: 100%;
+      display: grid;
+      grid-gap: 25px;
+      grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+      .item {
+        width: 100%;
+        border-radius: 8px;
+        background: $white;
+        padding: 15px;
+        overflow: hidden;
+        h1 {
+          font-size: 7rem;
+          color: #000;
+          text-align: left;
+        }
+        img {
+          width: 100%;
+          height: 300px;
+          border-radius: 4px;
+        }
+        .flex-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .title {
+            color: #000;
+            margin: 20px 10px 0 0;
+            font-size: 1.8rem;
+            font-weight: 400;
+          }
+          .view-btn {
+            text-decoration: none;
+            text-align: center;
+            width: 130px;
+            padding: 10px 0;
+            background: $blue;
+            color: whitesmoke;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-top: 20px;
+            border-radius: 4px;
+            align-self: flex-start;
+
+            &:hover {
+              background: $blurhover;
+              color: $black;
+            }
+          }
+        }
+
+        .item-data {
+          color: $black;
+          display: block;
+          margin-top: 7px;
+          font-size: 1.5rem;
+          letter-spacing: 0.05rem;
+          line-height: 2rem;
+        }
+        .list-ingredient {
+          color: $black;
+          display: block;
+          margin-top: 7px;
+          margin-bottom: 10px;
+          letter-spacing: 0.05rem;
+          line-height: 2rem;
+          span {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+
+  li {
+    color: $black;
+    font-size: 1.5rem;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    background-color: #f6f6f6;
+    padding: 12px;
+    list-style-type: none;
+  }
 }
 
 @media (max-width: 768px) {
-  .search-result {
-    grid-gap: 10px;
-  }
-  .container.initial .brand {
-    font-size: 4rem;
-  }
-  .container.initial form {
-    max-width: 500px;
-  }
-  .container.initial form input {
-    padding: 10px;
-    font-size: 2rem;
-  }
 }
 
 @keyframes fadeUp {
@@ -317,7 +341,7 @@ span {
   }
 }
 
-// media queries
+// Responsive
 
 @media (max-width: 991px) {
   html {
@@ -355,6 +379,43 @@ span {
       font-size: 2rem;
       margin: 2rem;
       display: block;
+    }
+  }
+  .home {
+    .row {
+      img {
+        width: 93%;
+      }
+    }
+  }
+  // .home {
+  //   background-size: cover;
+  //   background-position: center;
+  //   .row {
+  //     .images {
+  //       opacity: 0.5 !important;
+  //       height: 100vh;
+  //       width: 100%;
+  //     }
+  //   }
+  // }
+
+  .search-food {
+    .search-result {
+      grid-gap: 10px !important;
+    }
+    .container {
+      h1 {
+        font-size: 4rem;
+        color: $black;
+      }
+      form {
+        max-width: 500px;
+        input {
+          padding: 10px;
+          font-size: 2rem;
+        }
+      }
     }
   }
 }
