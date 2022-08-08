@@ -185,6 +185,9 @@ section {
     }
     .images {
       flex: 1 1 45rem;
+      img {
+        width: 100%;
+      }
     }
   }
 }
@@ -234,6 +237,7 @@ section {
         display: inline-block;
         padding: 15px;
         font-size: 2.5rem;
+        text-transform: none;
       }
       i {
         width: 8%;
@@ -331,9 +335,6 @@ section {
   }
 }
 
-@media (max-width: 768px) {
-}
-
 @keyframes fadeUp {
   0% {
     transform: translateY(5rem);
@@ -354,6 +355,13 @@ section {
 
   section {
     padding: 2rem;
+  }
+  .home {
+    .row {
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -384,7 +392,7 @@ section {
   .home {
     .row {
       img {
-        width: 93%;
+        width: 93% !important;
       }
     }
   }

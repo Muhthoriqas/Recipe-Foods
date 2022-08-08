@@ -14,7 +14,6 @@ const container = document.querySelector(".container");
 let searchQuery = "";
 const APP_ID = "b4f0455e";
 const APP_key = "e42c126ef6f229e500dd22a660af5976";
-// console.log(container)
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   searchQuery = e.target.querySelector("input").value;
@@ -25,12 +24,19 @@ async function fetchAPI() {
   const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=20`;
   const response = await fetch(baseURL);
   const data = await response.json();
+  countData(data.count);
   generateHTML(data.hits);
   console.log(data);
 }
 
+function countData(countResult) {
+  if (countResult < 1) {
+    return alert("Data Not Found Search Another Recipe");
+  }
+}
+
 function generateHTML(results) {
-  container.classList.remove("initial");
+  // container.classList.remove("initial");
   let generatedHTML = "";
   results.map((result) => {
     generatedHTML += `
@@ -43,11 +49,7 @@ function generateHTML(results) {
           }">View Recipe</a>
         </div>
         <p class="item-data">Calories: ${result.recipe.calories.toFixed(2)}</p>
-        <p class="item-data">Food Type: ${
-          result.recipe.dishType.length > 0
-            ? result.recipe.dishType
-            : "Data Not Found"
-        }</p>
+        <p class="item-data">Food Type: ${result.recipe.dishType}</p>
         <p class="list-ingredient">Ingredients: ${
           result.recipe.ingredientLines.length > 10
             ? "<span>To Much Ingredients To Show! Click View Recipe Button To See Full Information</span>"

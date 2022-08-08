@@ -154,6 +154,9 @@ section {
 .home .row .images {
   flex: 1 1 45rem;
 }
+.home .row .images img {
+  width: 100%;
+}
 
 .text {
   color: #fff;
@@ -204,6 +207,7 @@ section {
   display: inline-block;
   padding: 15px;
   font-size: 2.5rem;
+  text-transform: none;
 }
 .search-food .container form i {
   width: 8%;
@@ -318,6 +322,9 @@ section {
   section {
     padding: 2rem;
   }
+  .home .row img {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   #menu-btn {
@@ -344,7 +351,7 @@ section {
     display: block;
   }
   .home .row img {
-    width: 93%;
+    width: 93% !important;
   }
   .search-food .search-result {
     grid-gap: 10px !important;
