@@ -22,19 +22,19 @@
       <nav class="navbar">
         <a href="#home">Home</a>
         <a href="#search">Search</a>
-        <a href="#about">About</a>
+        <a href="#category">Category</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
-        <div id="search-btn" class="fas fa-search"></div>
-        <div id="cart-btn" class="fas fa-star"></div>
-        <div id="login-btn" class="fas fa-user"></div>
+        <a  href="#search" id="search-btn" class="fas fa-search"></a>
+        <a  href="#category" class="fas fa-bowl-food"></a>
+        <a id="login-btn" class="fas fa-user"  onclick="notify()"></a>
       </div>
     </header>
     <!-- Header Section End -->
 
-    <!-- Hero Section Start-->
+    <!-- Home Section Start-->
     <section class="home" id="home">
       <div class="row">
         <div class="content">
@@ -51,11 +51,12 @@
           >
         </div>
         <div class="images">
-          <img src="./assets/hero-dish.png" alt="" />
+          <img src="./assets/homeImg.png" alt="" />
         </div>
       </div>
     </section>
-    <!-- Hero Section End -->
+
+    <!-- Home Section End -->
     <section class="search-food">
       <div class="container">
         <h1 id="search">Search Your Favorite Dish Here</h1>
@@ -147,6 +148,113 @@
         </div>
       </div>
     </section>
+
+    <!-- Category Section Start -->
+    <section class="category">
+      <div class="container">
+        <h1 class="heading"  id="category"><span>food recipes by country</span></h1>
+        <h1 class="coming-soon">This Featur is Comming Soon!</h1>
+        <div class="box-container">
+          <div class="box">
+            <div class="image">
+              <img src="./assets/asian.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>Asian Foods</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
+                adipisci!
+              </p>
+              <a onclick="notify()" class="asia btn">read more</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="./assets/american.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>American Foods</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
+                adipisci!
+              </p>
+              <a onclick="notify()" class="btn">read more</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="./assets/japan.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>Japan Foods</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
+                adipisci!
+              </p>
+              <a onclick="notify()" class="btn">read more</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="./assets/korea.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>Korea Foods</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
+                adipisci!
+              </p>
+              <a  onclick="notify()" class="btn">read more</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="./assets/italia.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>Italia Foods</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
+                adipisci!
+              </p>
+              <a onclick="notify()" class="btn">read more</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="image">
+              <img src="./assets/india.jpg" alt="" />
+            </div>
+            <div class="content">
+              <h3>India Foods</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
+                adipisci!
+              </p>
+              <a onclick="notify()" class="btn">read more</a>
+            </div>
+          </div>
+      </div>
+      <div id="load-more">load more</div>
+
+    </section>
+    <!-- Category Section End -->
+
+    <!-- Coming Soon Section Start -->
+    <div class="form-notify">
+      <h2>This Featur Is <br/>Comming Soon!</h2>
+      <div class="buttonOk">
+        <input type="submit" value="Okay ☕"  onclick="notify()"/>
+        <i class="fa-solid fa-xmark" onclick="notify()"></i>
+      </div>
+
+    </div>
+    <!-- Form End -->
+    <!-- Coming Soon Section End -->
     <!-- <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script> -->
   </body>
 </html>

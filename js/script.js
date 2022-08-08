@@ -11,6 +11,7 @@ window.onscroll = () => {
 const searchForm = document.querySelector("form");
 const searchResultDiv = document.querySelector(".search-result");
 const container = document.querySelector(".container");
+const resultCatefory = document.querySelector(".box-container");
 let searchQuery = "";
 const APP_ID = "b4f0455e";
 const APP_key = "e42c126ef6f229e500dd22a660af5976";
@@ -27,6 +28,7 @@ async function fetchAPI() {
   countData(data.count);
   generateHTML(data.hits);
   console.log(data);
+  // Category(data.hits);
 }
 
 function countData(countResult) {
@@ -59,8 +61,44 @@ function generateHTML(results) {
               })
         }</p>
       </div>
+
     `;
   });
   var hasil = generatedHTML.replaceAll(",", "");
   searchResultDiv.innerHTML = hasil;
+}
+
+let loadMoreBtn = document.querySelector("#load-more");
+let currentItem = 3;
+
+loadMoreBtn.onclick = () => {
+  let boxes = [...document.querySelectorAll(".container .box-container .box")];
+  for (var i = currentItem; i < currentItem + 3; i++) {
+    boxes[i].style.display = "inline-block";
+  }
+  currentItem += 3;
+
+  if (currentItem >= boxes.length) {
+    loadMoreBtn.style.display = "none";
+  }
+};
+
+// function Category(results) {
+//   let CategoryH = "";
+//   results.map((result) => {
+//     if (result.recipe.cauisineType == "british") {
+//       return result.recipe.label;
+//     }
+//     CategoryH += `
+//       <div class="box">
+//       </div>
+//     `;
+//   });
+//   var categoriHasil = CategoryH.replaceAll(",", "");
+//   resultCatefory.innerHTML = categoriHasil;
+// }
+
+function notify() {
+  var newsletter = document.querySelector(".form-notify");
+  newsletter.classList.toggle("active");
 }

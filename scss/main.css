@@ -236,6 +236,9 @@ section {
   padding: 15px;
   overflow: hidden;
 }
+.search-food .container .search-result .item:hover {
+  transform: scale(1.03);
+}
 .search-food .container .search-result .item h1 {
   font-size: 7rem;
   color: #000;
@@ -303,19 +306,182 @@ section {
   list-style-type: none;
 }
 
-@-webkit-keyframes fadeUp {
-  0% {
-    transform: translateY(5rem);
-    opacity: 0;
-  }
+/* Category Section */
+.category {
+  background-image: url(../assets/banner-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.category .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 25px 10px;
+}
+.category .container .heading {
+  font-size: 40px;
+  color: #444;
+}
+.category .container .coming-soon {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #7cd5f3;
+}
+.category .container .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+.category .container .box-container .box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.category .container .box-container .box:hover {
+  transform: scale(1.05);
+}
+.category .container .box-container .box .image {
+  margin-bottom: 20px;
+  overflow: hidden;
+  height: 250px;
+  border-radius: 5px;
+}
+.category .container .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.category .container .box-container .box .content h3 {
+  font-size: 20px;
+  color: #334;
+}
+.category .container .box-container .box .content p {
+  font-size: 15px;
+  color: #777;
+  line-height: 2;
+  padding: 15px 0;
+}
+.category .container .box-container .box .content .btn {
+  display: inline-block;
+  padding: 10px 30px;
+  border: var(--border);
+  color: #fff;
+  font-size: 16px;
+  border-radius: 7px;
+  background: #7cd5f3;
+}
+.category .container .box-container .box .content .btn:hover {
+  background-color: #b4e7f8;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+.category .container .box-container .box .content .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+}
+.category .container .box-container .box .content .icons span {
+  font-size: 14px;
+  color: #777;
+}
+.category .container .box-container .box .content .icons span i {
+  color: #7cd5f3;
+  padding-right: 5px;
+}
+.category #load-more {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 13px 30px;
+  border: 1px solid #000;
+  color: #000;
+  font-size: 16px;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 7px;
+  font-weight: 600;
+  text-align: center;
+  align-items: center;
+}
+.category #load-more:hover {
+  background-color: #7cd5f3;
+  color: #fff;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
 }
 
-@keyframes fadeUp {
-  0% {
-    transform: translateY(5rem);
-    opacity: 0;
-  }
+.container .box-container .box:nth-child(1),
+.container .box-container .box:nth-child(2),
+.container .box-container .box:nth-child(3) {
+  display: inline-block;
 }
+
+.form-notify {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  width: 500px;
+  background: white;
+  z-index: 10000;
+  box-shadow: 0 0 0 100vh rgba(211, 211, 211, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 20px;
+  background: #b4e7f8;
+}
+
+.form-notify.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.form-notify h2 {
+  font-size: 3.5rem;
+  color: #444;
+  line-height: 35px;
+  text-align: center;
+}
+
+.form-notify p {
+  font-size: 2rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form-notify input[type=submit] {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 3rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  background: #444;
+  border: 2px solid #444;
+  color: #f7f7f7;
+  border-radius: 5px;
+  font-weight: 550;
+}
+
+.form-notify .buttonOk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-notify i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3em;
+  height: 40px;
+  cursor: pointer;
+}
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -358,7 +524,10 @@ section {
     width: 93% !important;
   }
   .search-food .search-result {
-    grid-gap: 10px !important;
+    grid-gap: 20px !important;
+  }
+  .search-food .search-result .item:hover {
+    transform: scale(1.01);
   }
   .search-food .container h1 {
     font-size: 4rem;

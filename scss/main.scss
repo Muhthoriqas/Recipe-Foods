@@ -266,6 +266,9 @@ section {
         background: $white;
         padding: 15px;
         overflow: hidden;
+        &:hover {
+          transform: scale(1.03);
+        }
         h1 {
           font-size: 7rem;
           color: #000;
@@ -340,11 +343,183 @@ section {
   }
 }
 
-@keyframes fadeUp {
-  0% {
-    transform: translateY(5rem);
-    opacity: 0;
+/* Category Section */
+.category {
+  background-image: url(../assets/banner-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 25px 10px;
+    .heading {
+      font-size: 40px;
+      color: $black;
+    }
+    .coming-soon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: $blue;
+    }
+
+    .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 20px;
+      .box {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        display: none;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+        .image {
+          margin-bottom: 20px;
+          overflow: hidden;
+          height: 250px;
+          border-radius: 5px;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .content {
+          h3 {
+            font-size: 20px;
+            color: #334;
+          }
+          p {
+            font-size: 15px;
+            color: #777;
+            line-height: 2;
+            padding: 15px 0;
+          }
+          .btn {
+            display: inline-block;
+            padding: 10px 30px;
+            border: var(--border);
+            color: #fff;
+            font-size: 16px;
+            border-radius: 7px;
+            background: $blue;
+
+            &:hover {
+              background-color: $blurhover;
+              border: $border;
+            }
+          }
+          .icons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid $black;
+
+            span {
+              font-size: 14px;
+              color: #777;
+              i {
+                color: $blue;
+                padding-right: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
+  #load-more {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 13px 30px;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 16px;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 7px;
+    font-weight: 600;
+    text-align: center;
+    align-items: center;
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+      border: $border;
+    }
+  }
+}
+
+.container .box-container .box:nth-child(1),
+.container .box-container .box:nth-child(2),
+.container .box-container .box:nth-child(3) {
+  display: inline-block;
+}
+
+.form-notify {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  width: 500px;
+  background: white;
+  z-index: 10000;
+  box-shadow: 0 0 0 100vh rgba(211, 211, 211, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 20px;
+  background: $blurhover;
+}
+
+.form-notify.active {
+  visibility: visible;
+  opacity: 1;
+}
+.form-notify h2 {
+  font-size: 3.5rem;
+  color: $black;
+  line-height: 35px;
+  text-align: center;
+}
+.form-notify p {
+  font-size: 2rem;
+  margin-top: 10px;
+  text-align: center;
+}
+.form-notify input[type="submit"] {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 3rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  background: $black;
+  border: 2px solid $black;
+  color: $light-bg;
+  border-radius: 5px;
+  font-weight: 550;
+}
+.form-notify .buttonOk {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-notify i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  // width: 40px;
+  font-size: 3em;
+  height: 40px;
+  cursor: pointer;
 }
 
 // Responsive
@@ -415,7 +590,12 @@ section {
 
   .search-food {
     .search-result {
-      grid-gap: 10px !important;
+      grid-gap: 20px !important;
+      .item {
+        &:hover {
+          transform: scale(1.01);
+        }
+      }
     }
     .container {
       h1 {
@@ -424,6 +604,7 @@ section {
       }
       form {
         max-width: 500px;
+
         input {
           padding: 10px;
           font-size: 2rem;
