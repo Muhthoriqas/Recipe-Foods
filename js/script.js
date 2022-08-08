@@ -23,17 +23,20 @@ searchForm.addEventListener("submit", (e) => {
 
 async function fetchAPI() {
   const baseURL = `https://api.edamam.com/search?q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_key}&from=0&to=20`;
+  displayLoading();
   const response = await fetch(baseURL);
   const data = await response.json();
+
   countData(data.count);
   generateHTML(data.hits);
-  console.log(data);
+  // console.log(data);
+  hideLoading();
   // Category(data.hits);
 }
 
 function countData(countResult) {
   if (countResult < 1) {
-    return alert("Data Not Found Search Another Recipe");
+    notify2();
   }
 }
 
@@ -101,4 +104,18 @@ loadMoreBtn.onclick = () => {
 function notify() {
   var newsletter = document.querySelector(".form-notify");
   newsletter.classList.toggle("active");
+}
+function notify2() {
+  var newsletter = document.querySelector(".form-notify2");
+  newsletter.classList.toggle("active");
+}
+const loader = document.querySelector("#loading");
+function displayLoading() {
+  loader.classList.add("display");
+  setTimeout(() => {
+    loader.classList.remove("display");
+  }, 8000);
+}
+function hideLoading() {
+  loader.classList.remove("display");
 }

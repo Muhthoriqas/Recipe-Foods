@@ -47,7 +47,7 @@
             adipisicing elit. Iste nam sit, dolores.
           </p>
           <a href="#search" class="btn"
-            ><i class="fa fa-search-plus"></i> Browse Recipe</a
+            ><i  class="fa fa-search-plus"></i> Browse Recipe</a
           >
         </div>
         <div class="images">
@@ -62,8 +62,14 @@
         <h1 id="search">Search Your Favorite Dish Here</h1>
         <form>
           <input type="text" placeholder="Search Your Recipe..." />
-          <i class="fa fa-search" name="search"></i>
+          <button>
+            <i type="button" class="fa fa-search" name="search"></i>
+          </button>
         </form>
+        <div class="centerDiv">
+          <div id="loading"></div>
+        </div>
+
         <div class="search-result">
           <div class="item">
             <img src="./assets/sadnwich.jpg" alt="" />
@@ -247,14 +253,21 @@
     <!-- Coming Soon Section Start -->
     <div class="form-notify">
       <h2>This Featur Is <br/>Comming Soon!</h2>
-      <div class="buttonOk">
+      <div class="centerDiv">
         <input type="submit" value="Okay ☕"  onclick="notify()"/>
         <i class="fa-solid fa-xmark" onclick="notify()"></i>
       </div>
-
     </div>
-    <!-- Form End -->
-    <!-- Coming Soon Section End -->
-    <!-- <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script> -->
+    <!-- Coming Soon Section End-->
+
+    <!-- Not Found Section Start-->
+      <div class="form-notify2">
+        <h2>Upss Data Not Found!!! <br/>Search Another Recep</h2>
+        <div class="centerDiv">
+          <input type="submit" value="Okay 🍟"  onclick="notify2()"/>
+          <i class="fa-solid fa-xmark" onclick="notify2()"></i>
+        </div>
+    </div>
+    <!-- Not Found Section End -->
   </body>
 </html>
