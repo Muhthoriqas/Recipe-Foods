@@ -788,6 +788,7 @@ footer .bottom a:hover {
   }
   .search-food .search-result {
     grid-gap: 20px !important;
+    grid-template-columns: 1fr !important;
   }
   .search-food .search-result .item:hover {
     transform: scale(1.01);
@@ -833,5 +834,26 @@ footer .bottom a:hover {
   }
   .category .box-container {
     grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 230px) {
+  .category .heading {
+    font-size: 20px !important;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  footer .main-content {
+    flex-wrap: initial;
+  }
+  footer .email .text {
+    font-size: 10px !important;
+  }
+}
+@media (max-width: 170px) {
+  html {
+    font-size: 25%;
+  }
+  .category .box-container {
+    grid-template-columns: 100px !important;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -866,6 +866,8 @@ footer {
   .search-food {
     .search-result {
       grid-gap: 20px !important;
+      grid-template-columns: 1fr !important;
+
       .item {
         &:hover {
           transform: scale(1.01);
@@ -925,6 +927,38 @@ footer {
   .category {
     .box-container {
       grid-template-columns: 1fr !important;
+    }
+  }
+}
+
+@media (max-width: 230px) {
+  .category {
+    .heading {
+      font-size: 20px !important;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
+  }
+  footer {
+    .main-content {
+      flex-wrap: initial;
+    }
+    .email {
+      .text {
+        // display: none;
+        font-size: 10px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 170px) {
+  html {
+    font-size: 25%;
+  }
+  .category {
+    .box-container {
+      grid-template-columns: 100px !important;
     }
   }
 }
