@@ -809,9 +809,29 @@ footer .bottom a:hover {
   footer .left .content .social {
     text-align: center;
   }
+  .form-notify {
+    width: 70%;
+  }
+  .form-notify h2 {
+    font-size: 2.5rem;
+    line-height: 25px;
+  }
+  .form-notify2 {
+    width: 70%;
+  }
+  .form-notify2 h2 {
+    font-size: 2.5rem;
+    line-height: 25px;
+  }
 }
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+  .search-food .container form i {
+    font-size: 2rem;
+  }
+  .category .box-container {
+    grid-template-columns: 1fr !important;
   }
 }/*# sourceMappingURL=main.css.map */
