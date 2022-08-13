@@ -111,6 +111,7 @@ function notify2() {
 }
 const loader = document.querySelector("#loading");
 function displayLoading() {
+  document.getElementById("body").style.opacity = "0.5";
   loader.classList.add("display");
   setTimeout(() => {
     loader.classList.remove("display");
@@ -118,4 +119,5 @@ function displayLoading() {
 }
 function hideLoading() {
   loader.classList.remove("display");
+  document.getElementById("body").style.opacity = "1";
 }
