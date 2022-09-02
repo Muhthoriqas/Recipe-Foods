@@ -889,9 +889,7 @@ footer {
       }
     }
   }
-  footer {
-    margin-bottom: 55px;
-  }
+
   footer .left .content .social {
     text-align: center;
   }
@@ -938,7 +936,19 @@ footer {
       line-height: 30px;
       margin-bottom: 10px;
     }
+    .container {
+      .box-container {
+        .box {
+          .content {
+            .btn {
+              padding: 10px !important;
+            }
+          }
+        }
+      }
+    }
   }
+
   footer {
     .main-content {
       flex-wrap: initial;

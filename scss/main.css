@@ -804,9 +804,6 @@ footer .bottom a:hover {
     padding: 10px;
     font-size: 2rem;
   }
-  footer {
-    margin-bottom: 55px;
-  }
   footer .left .content .social {
     text-align: center;
   }
@@ -841,6 +838,9 @@ footer .bottom a:hover {
     font-size: 20px !important;
     line-height: 30px;
     margin-bottom: 10px;
+  }
+  .category .container .box-container .box .content .btn {
+    padding: 10px !important;
   }
   footer .main-content {
     flex-wrap: initial;
