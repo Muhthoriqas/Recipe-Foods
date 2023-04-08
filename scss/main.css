@@ -48,7 +48,6 @@ section {
 }
 
 .header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
@@ -325,6 +324,7 @@ section {
 .category .container .heading {
   font-size: 40px;
   color: #444;
+  margin-bottom: 30px;
 }
 .category .container .coming-soon {
   font-size: 20px;
@@ -401,7 +401,7 @@ section {
   margin-top: 20px;
   display: inline-block;
   padding: 13px 30px;
-  border: 1px solid #000;
+  border: 1px solid #777;
   color: #000;
   font-size: 16px;
   background-color: transparent;
@@ -410,6 +410,8 @@ section {
   font-weight: 600;
   text-align: center;
   align-items: center;
+  display: block;
+  margin: 0 20px;
 }
 .category #load-more:hover {
   background-color: #7cd5f3;
@@ -646,7 +648,7 @@ footer .bottom a:hover {
 }
 .form-notify2 h2 {
   font-size: 3.5rem;
-  color: #444;
+  color: #fff;
   line-height: 35px;
   text-align: center;
 }
@@ -681,12 +683,62 @@ footer .bottom a:hover {
   color: #444;
 }
 
-.form-notify.active {
-  visibility: visible;
-  opacity: 1;
+.form-notify3 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  width: 500px;
+  background: white;
+  z-index: 10000;
+  box-shadow: 0 0 0 100vh rgba(211, 211, 211, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 20px;
+  background: #5cb85c;
+}
+.form-notify3 h2 {
+  font-size: 3.5rem;
+  color: #fff;
+  line-height: 35px;
+  text-align: center;
+}
+.form-notify3 p {
+  font-size: 2rem;
+  margin-top: 10px;
+  text-align: center;
+}
+.form-notify3 input[type=submit] {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 3rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  background: #444;
+  border: 2px solid #444;
+  color: #f7f7f7;
+  border-radius: 5px;
+  font-weight: 550;
+}
+.form-notify3 input[type=submit]:hover {
+  background: transparent;
+  color: #444;
+}
+.form-notify3 i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3em;
+  height: 40px;
+  cursor: pointer;
+  color: #444;
 }
 
-.form-notify2.active {
+.form-notify.active,
+.form-notify2.active,
+.form-notify3.active {
   visibility: visible;
   opacity: 1;
 }
@@ -698,29 +750,22 @@ footer .bottom a:hover {
 }
 
 #loading {
-  position: absolute;
-  margin-top: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 5rem;
   height: 5rem;
   border: 5px solid #f3f3f3;
   border-top: 6px solid #7cd5f3;
   border-radius: 100%;
   visibility: hidden;
-  -webkit-animation: spin 1s infinite linear;
-          animation: spin 1s infinite linear;
+  animation: spin 1s infinite linear;
+  z-index: 10000;
 }
 
 #loading.display {
   visibility: visible;
-}
-
-@-webkit-keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes spin {

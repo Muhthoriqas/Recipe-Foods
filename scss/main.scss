@@ -98,12 +98,14 @@ section {
       color: $blue;
       transition: 0.4s ease-in-out;
       cursor: pointer;
+
       &:hover {
         transform: rotate(-360deg);
         color: $green;
       }
     }
   }
+
   .images {
     width: 100%;
   }
@@ -153,11 +155,13 @@ section {
   background-image: url(../assets/banner-bg.jpg);
   background-size: cover;
   background-position: center;
+
   .row {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
+
     .content {
       flex: 1 1 42rem;
 
@@ -168,37 +172,45 @@ section {
         -webkit-text-fill-color: transparent;
         line-height: 55px;
       }
+
       p {
         color: $black;
         font-size: 1.5rem;
         line-height: 2;
         padding: 1rem 0;
       }
+
       .fa-search-plus {
         transform: rotate(90deg);
         font-size: 2.3rem;
         color: white;
+
         &:hover {
           color: $black;
         }
       }
     }
+
     .images {
       flex: 1 1 45rem;
+
       img {
         width: 100%;
       }
     }
   }
 }
+
 .text {
   color: $white;
   font-size: 2rem;
 }
+
 .list-ingredient {
   color: white;
   font-size: 1.5rem;
 }
+
 .search-food {
   min-height: 100vh;
   width: 100%;
@@ -209,6 +221,7 @@ section {
   background-image: url(../assets/banner-bg.jpg);
   background-size: cover;
   background-position: center;
+
   .container {
     width: 100%;
     height: 90%;
@@ -222,6 +235,7 @@ section {
       color: $black;
       margin-bottom: 30px;
     }
+
     form {
       width: 90%;
       max-width: 600px;
@@ -244,10 +258,12 @@ section {
         font-size: 2.5rem;
         text-transform: none;
       }
+
       button {
         background: none;
         cursor: pointer;
       }
+
       i {
         width: 8%;
         font-size: 2.5rem;
@@ -258,41 +274,49 @@ section {
         align-items: center;
       }
     }
+
     .search-result {
       margin-top: 50px;
       width: 100%;
       display: grid;
       grid-gap: 25px;
       grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+
       .item {
         width: 100%;
         border-radius: 8px;
         background: $white;
         padding: 15px;
         overflow: hidden;
+
         &:hover {
           transform: scale(1.03);
         }
+
         h1 {
           font-size: 7rem;
           color: #000;
           text-align: left;
         }
+
         img {
           width: 100%;
           height: 300px;
           border-radius: 4px;
         }
+
         .flex-container {
           display: flex;
           align-items: center;
           justify-content: space-between;
+
           .title {
             color: #000;
             margin: 20px 10px 0 0;
             font-size: 1.8rem;
             font-weight: 400;
           }
+
           .view-btn {
             text-decoration: none;
             text-align: center;
@@ -321,6 +345,7 @@ section {
           letter-spacing: 0.05rem;
           line-height: 2rem;
         }
+
         .list-ingredient {
           color: $black;
           display: block;
@@ -328,6 +353,7 @@ section {
           margin-bottom: 10px;
           letter-spacing: 0.05rem;
           line-height: 2rem;
+
           span {
             color: $blue;
           }
@@ -352,15 +378,19 @@ section {
   background-image: url(../assets/banner-bg.jpg);
   background-size: cover;
   background-position: center;
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
     padding: 25px 10px;
+
     .heading {
       font-size: 40px;
       color: $black;
+      margin-bottom: 30px;
     }
+
     .coming-soon {
       font-size: 20px;
       margin-bottom: 20px;
@@ -371,6 +401,7 @@ section {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 20px;
+
       .box {
         background-color: $white;
         padding: 20px;
@@ -381,28 +412,33 @@ section {
         &:hover {
           transform: scale(1.05);
         }
+
         .image {
           margin-bottom: 20px;
           overflow: hidden;
           height: 250px;
           border-radius: 5px;
+
           img {
             height: 100%;
             width: 100%;
             object-fit: cover;
           }
         }
+
         .content {
           h3 {
             font-size: 20px;
             color: #334;
           }
+
           p {
             font-size: 15px;
             color: #777;
             line-height: 2;
             padding: 15px 0;
           }
+
           .btn {
             display: inline-block;
             padding: 10px 30px;
@@ -417,6 +453,7 @@ section {
               border: $border;
             }
           }
+
           .icons {
             display: flex;
             align-items: center;
@@ -428,6 +465,7 @@ section {
             span {
               font-size: 14px;
               color: #777;
+
               i {
                 color: $blue;
                 padding-right: 5px;
@@ -438,11 +476,12 @@ section {
       }
     }
   }
+
   #load-more {
     margin-top: 20px;
     display: inline-block;
     padding: 13px 30px;
-    border: 1px solid #000;
+    border: 1px solid #777;
     color: #000;
     font-size: 16px;
     background-color: transparent;
@@ -451,13 +490,17 @@ section {
     font-weight: 600;
     text-align: center;
     align-items: center;
-
+  
     &:hover {
       background-color: $blue;
       color: $white;
       border: $border;
     }
+  
+    display: block;
+    margin: 0 20px;
   }
+  
 }
 
 .container .box-container .box:nth-child(1),
@@ -471,14 +514,18 @@ footer {
   bottom: 0px;
   width: 100%;
   background: #eee;
+
   .main-content {
     display: flex;
+
     .box {
       flex-basis: 50%;
       padding: 10px 20px;
+
       .content {
         margin: 20px 0 0 0;
         position: relative;
+
         &:before {
           position: absolute;
           content: "";
@@ -487,6 +534,7 @@ footer {
           width: 100%;
           background: #334;
         }
+
         &:after {
           position: absolute;
           content: "";
@@ -497,22 +545,27 @@ footer {
         }
       }
     }
+
     h2 {
       font-size: 1.6rem;
       font-weight: 600;
       text-transform: uppercase;
       color: #334;
     }
+
     .left {
       .content {
         p {
           text-align: justify;
           font-size: 1.3rem;
         }
+
         .social {
           margin: 20px 0 0 0;
+
           a {
             padding: 0 2px;
+
             span {
               height: 40px;
               width: 40px;
@@ -534,6 +587,7 @@ footer {
         }
       }
     }
+
     .center {
       .content {
         .fas {
@@ -553,17 +607,20 @@ footer {
             color: #000;
           }
         }
+
         .text {
           font-size: 1.4rem;
           font-weight: 500;
           padding-left: 10px;
           color: $black;
         }
+
         .phone {
           margin: 15px 0;
         }
       }
     }
+
     .right {
       form {
         .text {
@@ -571,9 +628,11 @@ footer {
           margin-bottom: 2px;
           color: #334;
         }
+
         .msg {
           margin-top: 10px;
         }
+
         input,
         textarea {
           width: 100%;
@@ -588,12 +647,15 @@ footer {
             border: 2px solid #334;
           }
         }
+
         input {
           height: 35px;
         }
+
         .btn {
           margin-top: 10px;
         }
+
         .btn-msg {
           button {
             height: 40px;
@@ -608,6 +670,7 @@ footer {
             color: $white;
             border-radius: 7px;
             margin-top: 10px;
+
             &:hover {
               background: $green;
               border: 1px solid #000;
@@ -617,17 +680,21 @@ footer {
       }
     }
   }
+
   .bottom {
     text-align: center;
     padding: 5px;
     font-size: 1.6rem;
     background: #eee;
+
     span {
       color: #000;
     }
+
     a {
       color: $blue;
       text-decoration: none;
+
       &:hover {
         zoom: 110%;
       }
@@ -650,17 +717,20 @@ footer {
   transition: 0.3s;
   border-radius: 20px;
   background: $blurhover;
+
   h2 {
     font-size: 3.5rem;
     color: $black;
     line-height: 35px;
     text-align: center;
   }
+
   p {
     font-size: 2rem;
     margin-top: 10px;
     text-align: center;
   }
+
   input[type="submit"] {
     display: inline-block;
     margin-top: 2rem;
@@ -678,6 +748,7 @@ footer {
       color: $black;
     }
   }
+
   i {
     position: absolute;
     top: 20px;
@@ -704,17 +775,20 @@ footer {
   transition: 0.3s;
   border-radius: 20px;
   background: #eb4747;
+
   h2 {
     font-size: 3.5rem;
-    color: $black;
+    color: $white;
     line-height: 35px;
     text-align: center;
   }
+
   p {
     font-size: 2rem;
     margin-top: 10px;
     text-align: center;
   }
+
   input[type="submit"] {
     display: inline-block;
     margin-top: 2rem;
@@ -726,11 +800,13 @@ footer {
     color: $light-bg;
     border-radius: 5px;
     font-weight: 550;
+
     &:hover {
       background: transparent;
       color: $black;
     }
   }
+
   i {
     position: absolute;
     top: 20px;
@@ -743,12 +819,68 @@ footer {
   }
 }
 
-.form-notify.active {
-  visibility: visible;
-  opacity: 1;
+.form-notify3 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  width: 500px;
+  background: white;
+  z-index: 10000;
+  box-shadow: 0 0 0 100vh rgba(211, 211, 211, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  border-radius: 20px;
+  background: #5cb85c;
+
+  h2 {
+    font-size: 3.5rem;
+    color: $white;
+    line-height: 35px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 2rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  input[type="submit"] {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.5rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    background: $black;
+    border: 2px solid $black;
+    color: $light-bg;
+    border-radius: 5px;
+    font-weight: 550;
+
+    &:hover {
+      background: transparent;
+      color: $black;
+    }
+  }
+
+  i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    // width: 40px;
+    font-size: 3em;
+    height: 40px;
+    cursor: pointer;
+    color: $black;
+  }
 }
 
-.form-notify2.active {
+.form-notify.active,
+.form-notify2.active,
+.form-notify3.active {
   visibility: visible;
   opacity: 1;
 }
@@ -760,8 +892,10 @@ footer {
 }
 
 #loading {
-  position: absolute;
-  margin-top: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 5rem;
   height: 5rem;
   border: 5px solid #f3f3f3;
@@ -769,15 +903,19 @@ footer {
   border-radius: 100%;
   visibility: hidden;
   animation: spin 1s infinite linear;
+  z-index: 10000;
 }
+
 #loading.display {
   visibility: visible;
 }
+
 
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -797,6 +935,7 @@ footer {
   section {
     padding: 2rem;
   }
+
   .home {
     .row {
       img {
@@ -804,14 +943,18 @@ footer {
       }
     }
   }
+
   footer {
     position: relative;
     bottom: 0px;
+
     .main-content {
       flex-wrap: wrap;
       flex-direction: column;
+
       .box {
         margin: 5px 0;
+
         h2 {
           text-align: center;
         }
@@ -838,12 +981,14 @@ footer {
     &.active {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
+
     a {
       font-size: 2rem;
       margin: 2rem;
       display: block;
     }
   }
+
   .home {
     .row {
       img {
@@ -851,6 +996,7 @@ footer {
       }
     }
   }
+
   // .home {
   //   background-size: cover;
   //   background-position: center;
@@ -874,11 +1020,13 @@ footer {
         }
       }
     }
+
     .container {
       h1 {
         font-size: 4rem;
         color: $black;
       }
+
       form {
         max-width: 500px;
 
@@ -893,15 +1041,19 @@ footer {
   footer .left .content .social {
     text-align: center;
   }
+
   .form-notify {
     width: 70%;
+
     h2 {
       font-size: 2.5rem;
       line-height: 25px;
     }
   }
+
   .form-notify2 {
     width: 70%;
+
     h2 {
       font-size: 2.5rem;
       line-height: 25px;
@@ -913,6 +1065,7 @@ footer {
   html {
     font-size: 50%;
   }
+
   .search-food {
     .container {
       form {
@@ -922,6 +1075,7 @@ footer {
       }
     }
   }
+
   .category {
     .box-container {
       grid-template-columns: 1fr !important;
@@ -936,6 +1090,7 @@ footer {
       line-height: 30px;
       margin-bottom: 10px;
     }
+
     .container {
       .box-container {
         .box {
@@ -953,6 +1108,7 @@ footer {
     .main-content {
       flex-wrap: initial;
     }
+
     .email {
       .text {
         // display: none;
@@ -966,6 +1122,7 @@ footer {
   html {
     font-size: 25%;
   }
+
   .category {
     .box-container {
       grid-template-columns: 100px !important;

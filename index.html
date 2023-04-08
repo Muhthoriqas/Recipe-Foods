@@ -13,13 +13,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
-    <link rel="icon" type="image/svg"  href="./assets/food.svg" sizes="32x32">
-    <title>Food Recipes | Thoriq AS</title>
+    <link rel="icon" type="image/svg" href="./assets/food.svg" sizes="32x32" />
+    <title>Meal Map | Thoriq AS</title>
   </head>
   <body id="body">
     <!-- Header Section Start -->
     <header class="header">
-      <a href="#" class="logo"><i class="fas fa-utensils"></i> Food Recipes</a>
+      <a href="#" class="logo"><i class="fas fa-utensils"></i> Meal Map</a>
       <nav class="navbar">
         <a href="#home">Home</a>
         <a href="#search">Search</a>
@@ -28,9 +28,9 @@
       </nav>
       <div class="icons">
         <div id="menu-btn" class="fas fa-bars"></div>
-        <a  href="#search" id="search-btn" class="fas fa-search"></a>
-        <a  href="#category" class="fas fa-bowl-food"></a>
-        <a id="login-btn" class="fas fa-user"  onclick="notify()"></a>
+        <a href="#search" id="search-btn" class="fas fa-search"></a>
+        <a href="#category" class="fas fa-bowl-food"></a>
+        <a id="login-btn" class="fas fa-user" onclick="notify()"></a>
       </div>
     </header>
     <!-- Header Section End -->
@@ -39,16 +39,19 @@
     <section class="home" id="home">
       <div class="row">
         <div class="content">
-          <h1>Learn And Share <br />Food Recipes Here!</h1>
+          <h1>
+            Discover and Share <br />
+            Delicious Recipes Here!
+          </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio,
-            tenetur iusto vel incidunt accusamus consectetur voluptas magnam
-            deserunt ipsa unde voluptatum saepe inventore illum, quibusdam nihil
-            totam sapiente cupiditate? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Iste nam sit, dolores.
+            Welcome to Meal Map, your go-to destination for mouthwatering
+            recipes from across the globe. Whether you're a foodie or just love
+            to cook, our platform has something for everyone. From quick and
+            easy weeknight dinners to elaborate gourmet meals, our curated
+            collection of recipes has got you covered.
           </p>
           <a href="#search" class="btn"
-            ><i  class="fa fa-search-plus"></i> Browse Recipe</a
+            ><i class="fa fa-search-plus"></i> Browse Recipe</a
           >
         </div>
         <div class="images">
@@ -159,8 +162,10 @@
     <!-- Category Section Start -->
     <section class="category">
       <div class="container">
-        <h1 class="heading"  id="category"><span>food recipes by country</span></h1>
-        <h1 class="coming-soon">This Featur is Comming Soon!</h1>
+        <h1 class="heading" id="category">
+          <span>food recipes by country</span>
+        </h1>
+        <!-- <h1 class="coming-soon">This Featur is Comming Soon!</h1> -->
         <div class="box-container">
           <div class="box">
             <div class="image">
@@ -168,11 +173,10 @@
             </div>
             <div class="content">
               <h3>Asian Foods</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
-                adipisci!
-              </p>
-              <a onclick="notify()" class="asia btn">read more</a>
+              <p>Exploring Tasty and Flavorful Asian Cuisine Recipes</p>
+              <a onclick="searchByCategory('Asian')" class="asia btn"
+                >read more</a
+              >
             </div>
           </div>
 
@@ -182,11 +186,10 @@
             </div>
             <div class="content">
               <h3>American Foods</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
-                adipisci!
-              </p>
-              <a onclick="notify()" class="btn">read more</a>
+              <p>Exploring Tasty and Flavorful American Cuisine Recipes</p>
+              <a onclick="searchByCategory('American')" class="btn"
+                >read more</a
+              >
             </div>
           </div>
 
@@ -196,11 +199,8 @@
             </div>
             <div class="content">
               <h3>Japan Foods</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
-                adipisci!
-              </p>
-              <a onclick="notify()" class="btn">read more</a>
+              <p>Exploring Tasty and Flavorful Japan Cuisine Recipes</p>
+              <a onclick="searchByCategory('Japan')" class="btn">read more</a>
             </div>
           </div>
 
@@ -210,11 +210,8 @@
             </div>
             <div class="content">
               <h3>Korea Foods</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
-                adipisci!
-              </p>
-              <a  onclick="notify()" class="btn">read more</a>
+              <p>Exploring Tasty and Flavorful Korea Cuisine Recipes</p>
+              <a onclick="searchByCategory('Korea')" class="btn">read more</a>
             </div>
           </div>
 
@@ -224,11 +221,8 @@
             </div>
             <div class="content">
               <h3>Italia Foods</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
-                adipisci!
-              </p>
-              <a onclick="notify()" class="btn">read more</a>
+              <p>Exploring Tasty and Flavorful Italia Cuisine Recipes</p>
+              <a onclick="searchByCategory('Italian')" class="btn">read more</a>
             </div>
           </div>
 
@@ -238,20 +232,18 @@
             </div>
             <div class="content">
               <h3>India Foods</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod,
-                adipisci!
-              </p>
-              <a onclick="notify()" class="btn">read more</a>
+              <p>Exploring Tasty and Flavorful Indian Cuisine Recipes</p>
+              <a onclick="searchByCategory('Indian')" class="btn">read more</a>
             </div>
           </div>
+        </div>
       </div>
       <div id="load-more">load more</div>
     </section>
     <!-- Category Section End -->
 
-     <!-- Footer Start -->
-     <footer class="footer" id="footer">
+    <!-- Footer Start -->
+    <footer class="footer" id="footer">
       <div class="main-content">
         <div class="left box">
           <h2>About us</h2>
@@ -300,11 +292,11 @@
             <form action="">
               <div class="email">
                 <div class="text">Email</div>
-                <input type="email"placeholder="Email address..." required />
+                <input type="email" placeholder="Email address..." required />
               </div>
               <div class="msg">
                 <div class="text">Message</div>
-                <input type="text" placeholder="Your message..." required /></input>
+                <input type="text" placeholder="Your message..." required />
               </div>
               <div class="btn-msg">
                 <button type="submit" onclick="notify()">Send</button>
@@ -314,34 +306,45 @@
         </div>
       </div>
       <div class="bottom">
-          <span class="credit"
-            >Copyright <span class="far fa-copyright"></span
-              > 2022
-          </span>
-          <span> <a href="https://github.com/Muhthoriqas" target="_blank">Thoriq AS</a> | All rights reserved.</span>
+        <span class="credit"
+          >Copyright <span class="far fa-copyright"></span> 2022
+        </span>
+        <span>
+          <a href="https://github.com/Muhthoriqas" target="_blank">Thoriq AS</a>
+          | All rights reserved.</span
+        >
       </div>
     </footer>
     <!-- Footer End  -->
 
     <!-- Coming Soon Section Start -->
     <div class="form-notify">
-      <h2>This Featur Is <br/>Comming Soon!</h2>
+      <h2>This Featur Is <br />Comming Soon!</h2>
       <div class="centerDiv">
-        <input type="submit" value="Okay ☕"  onclick="notify()"/>
+        <input type="submit" value="Okay ☕" onclick="notify()" />
         <i class="fa-solid fa-xmark" onclick="notify()"></i>
       </div>
     </div>
     <!-- Coming Soon Section End-->
 
     <!-- Not Found Section Start-->
-      <div class="form-notify2">
-        <h2>Upss Data Not Found!!! <br/>Search Another Recep</h2>
-        <div class="centerDiv">
-          <input type="submit" value="Okay 🍟"  onclick="notify2()"/>
-          <i class="fa-solid fa-xmark" onclick="notify2()"></i>
-        </div>
+    <div class="form-notify2">
+      <h2>Upss Data Not Found!!! <br />Search Another Recep</h2>
+      <div class="centerDiv">
+        <input type="submit" value="Okay 🍟" onclick="notify2()" />
+        <i class="fa-solid fa-xmark" onclick="notify2()"></i>
+      </div>
     </div>
     <!-- Not Found Section End -->
 
+    <!--Success Alert Start-->
+    <div class="form-notify3">
+      <h2>Sucess Get Recipes</h2>
+      <div class="centerDiv">
+        <input type="submit" value="Okay 🌮" onclick="notify3()" />
+        <i class="fa-solid fa-xmark" onclick="notify3()"></i>
+      </div>
+    </div>
+    <!--Success Alert End -->
   </body>
 </html>
